@@ -1,0 +1,434 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+  <PropertyGroup>
+    <ProjectType>Local</ProjectType>
+    <ProductVersion>8.0.30319</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{7F48C880-646D-4683-AE29-F5A94AFC4506}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ApplicationIcon />
+    <AssemblyKeyContainerName />
+    <AssemblyName>Bussiness</AssemblyName>
+    <AssemblyOriginatorKeyFile />
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Bussiness</RootNamespace>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+    <StartupObject />
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>0.0</OldToolsVersion>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>..\%40Bin\Debug\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile />
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DocumentationFile />
+    <DebugSymbols>true</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn />
+    <Optimize>false</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>full</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>..\%40Bin\Release\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile />
+    <DefineConstants>TRACE</DefineConstants>
+    <DocumentationFile />
+    <DebugSymbols>false</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn />
+    <Optimize>true</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>none</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <BaseAddress>285212672</BaseAddress>
+    <FileAlignment>4096</FileAlignment>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <CodeAnalysisLogFile>..\@Bin\Debug\Bussiness.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;C:\Program Files\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <BaseAddress>285212672</BaseAddress>
+    <Optimize>true</Optimize>
+    <FileAlignment>4096</FileAlignment>
+    <PlatformTarget>x64</PlatformTarget>
+    <CodeAnalysisLogFile>..\@Bin\Release\Bussiness.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;C:\Program Files\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="mscorlib">
+      <Name>mscorlib</Name>
+      <HintPath>mscorlib.dll</HintPath>
+    </Reference>
+    <Reference Include="System">
+      <Name>System</Name>
+      <HintPath>System.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Core">
+      <Name>System.Core</Name>
+      <HintPath>System.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data">
+      <Name>System.Data</Name>
+      <HintPath>System.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Management">
+      <Name>System.Management</Name>
+      <HintPath>System.Management.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.XML" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="GoogleOffset.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Settings.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AccStatusMsg.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AlamStatus.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Alarm.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Area.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ArtificialAlarm.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AttachData.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AttachParser.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BussinessHelper.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Car.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CarAlarmType.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CarDataInfoBuffer.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CarFilter.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CarFilterInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CarHostConfirmType.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CarInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CarNotBeBackOnTime.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CarOil.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CarPartInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CommFlag.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CommFlagDesc.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CommonOverSpeedPathID.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CommResult.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Const.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CustomMessage.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DownCommand.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DownData.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DownDataFJYD.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DownDataIODevice.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DownDataPassThrough.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DownDataXCJLY.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ErrorDesc.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GpsUpData.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="HumidityData.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="LoginOnlieUserInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="LoginUserInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MapFlag.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Menu.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MsgType.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MsgTypeMsg.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Oix.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="OixBoxParameter.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="OixBoxType.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="OnlineUserInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="OrderTypeMsg.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="OverSpeedAlarm.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="OverSpeedPathID.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Packer.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ReceiveDataBase.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="RegionInOutAlarm.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="RemotingParam.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ReportTypeParam.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="RespCodeParam.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Result.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="RunSpeedAlarm.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="RunTimeAlarm.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SelfTestMsg.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SendBase.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SiteMap.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SSOLogin.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SystemConfiger.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="TrackReplay.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="TransportStatu.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="TransportStatuMsg.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="UpAlarm.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="UpBuffer.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="UpdataCommon.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="UpDataIODeviceData.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="UpdataIODeviceHandler.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="UpdataNewPosition.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="UpDataOtherData.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="UpdataReachCar.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="UpdataResponseData.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="UpdataStruct.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="UpPic.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="UpResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="UserCarId.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="UserInfoEntity.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="UserLoginInterface.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Application\Application.csproj">
+      <Project>{382CB7F3-5AA2-41FE-97D9-DAE3260B29D6}</Project>
+      <Name>Application</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DataAccess\DataAccess.csproj">
+      <Project>{CE9A2C93-797E-496D-980C-572026E51D4A}</Project>
+      <Name>DataAccess</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ParamLibrary\ParamLibrary.csproj">
+      <Project>{9998DAF9-2032-4593-8744-69BAC50FAF65}</Project>
+      <Name>ParamLibrary</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Protocol\Protocol.csproj">
+      <Project>{0B7F2E08-1E55-4493-BEC3-34AB88B01B38}</Project>
+      <Name>Protocol</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PublicClass\PublicClass.csproj">
+      <Project>{87AD003F-27F0-4B2B-A3D3-0A01F717ECAA}</Project>
+      <Name>PublicClass %28AppServer\PublicClass%29</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent />
+    <PostBuildEvent />
+  </PropertyGroup>
+</Project>

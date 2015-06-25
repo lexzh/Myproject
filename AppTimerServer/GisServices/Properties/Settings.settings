@@ -1,0 +1,12 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="GpsGisServices.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="GpsGisServices_WebGISservice_WebgisService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://219.153.13.108:7260/stargis/openlayers/WebgisService.asmx</Value>
+    </Setting>
+    <Setting Name="GpsGisServices_PlatformAlarmWebReference_AlarmService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://219.153.13.108:7260/StarGIS/Service/AlarmService.asmx</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

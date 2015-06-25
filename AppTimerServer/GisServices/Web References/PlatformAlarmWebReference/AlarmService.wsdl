@@ -1,0 +1,526 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="ChackRoadSegAlarm">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="inputXML" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ChackRoadSegAlarmResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ChackRoadSegAlarmResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ChackRoadSegAlarmCustom">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="inputXml" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ChackRoadSegAlarmCustomResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ChackRoadSegAlarmCustomResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetSeparateAndStickyCars">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="inputXml" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetSeparateAndStickyCarsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetSeparateAndStickyCarsResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="IsCarsOnRoad">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="inputXML" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="IsCarsOnRoadResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="IsCarsOnRoadResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="IsInArea">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="inputXML" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="IsInAreaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="IsInAreaResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SegAlarmTest">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="lon" type="s:double" />
+            <s:element minOccurs="1" maxOccurs="1" name="lat" type="s:double" />
+            <s:element minOccurs="1" maxOccurs="1" name="speed" type="s:double" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SegAlarmTestResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SegAlarmTestResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="string" nillable="true" type="s:string" />
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="ChackRoadSegAlarmSoapIn">
+    <wsdl:part name="parameters" element="tns:ChackRoadSegAlarm" />
+  </wsdl:message>
+  <wsdl:message name="ChackRoadSegAlarmSoapOut">
+    <wsdl:part name="parameters" element="tns:ChackRoadSegAlarmResponse" />
+  </wsdl:message>
+  <wsdl:message name="ChackRoadSegAlarmCustomSoapIn">
+    <wsdl:part name="parameters" element="tns:ChackRoadSegAlarmCustom" />
+  </wsdl:message>
+  <wsdl:message name="ChackRoadSegAlarmCustomSoapOut">
+    <wsdl:part name="parameters" element="tns:ChackRoadSegAlarmCustomResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetSeparateAndStickyCarsSoapIn">
+    <wsdl:part name="parameters" element="tns:GetSeparateAndStickyCars" />
+  </wsdl:message>
+  <wsdl:message name="GetSeparateAndStickyCarsSoapOut">
+    <wsdl:part name="parameters" element="tns:GetSeparateAndStickyCarsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IsCarsOnRoadSoapIn">
+    <wsdl:part name="parameters" element="tns:IsCarsOnRoad" />
+  </wsdl:message>
+  <wsdl:message name="IsCarsOnRoadSoapOut">
+    <wsdl:part name="parameters" element="tns:IsCarsOnRoadResponse" />
+  </wsdl:message>
+  <wsdl:message name="IsInAreaSoapIn">
+    <wsdl:part name="parameters" element="tns:IsInArea" />
+  </wsdl:message>
+  <wsdl:message name="IsInAreaSoapOut">
+    <wsdl:part name="parameters" element="tns:IsInAreaResponse" />
+  </wsdl:message>
+  <wsdl:message name="SegAlarmTestSoapIn">
+    <wsdl:part name="parameters" element="tns:SegAlarmTest" />
+  </wsdl:message>
+  <wsdl:message name="SegAlarmTestSoapOut">
+    <wsdl:part name="parameters" element="tns:SegAlarmTestResponse" />
+  </wsdl:message>
+  <wsdl:message name="ChackRoadSegAlarmHttpGetIn">
+    <wsdl:part name="inputXML" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ChackRoadSegAlarmHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="ChackRoadSegAlarmCustomHttpGetIn">
+    <wsdl:part name="inputXml" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ChackRoadSegAlarmCustomHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetSeparateAndStickyCarsHttpGetIn">
+    <wsdl:part name="inputXml" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetSeparateAndStickyCarsHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="IsCarsOnRoadHttpGetIn">
+    <wsdl:part name="inputXML" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="IsCarsOnRoadHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="IsInAreaHttpGetIn">
+    <wsdl:part name="inputXML" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="IsInAreaHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="SegAlarmTestHttpGetIn">
+    <wsdl:part name="lon" type="s:string" />
+    <wsdl:part name="lat" type="s:string" />
+    <wsdl:part name="speed" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="SegAlarmTestHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="ChackRoadSegAlarmHttpPostIn">
+    <wsdl:part name="inputXML" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ChackRoadSegAlarmHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="ChackRoadSegAlarmCustomHttpPostIn">
+    <wsdl:part name="inputXml" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ChackRoadSegAlarmCustomHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetSeparateAndStickyCarsHttpPostIn">
+    <wsdl:part name="inputXml" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetSeparateAndStickyCarsHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="IsCarsOnRoadHttpPostIn">
+    <wsdl:part name="inputXML" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="IsCarsOnRoadHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="IsInAreaHttpPostIn">
+    <wsdl:part name="inputXML" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="IsInAreaHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="SegAlarmTestHttpPostIn">
+    <wsdl:part name="lon" type="s:string" />
+    <wsdl:part name="lat" type="s:string" />
+    <wsdl:part name="speed" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="SegAlarmTestHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:portType name="AlarmServiceSoap">
+    <wsdl:operation name="ChackRoadSegAlarm">
+      <wsdl:input message="tns:ChackRoadSegAlarmSoapIn" />
+      <wsdl:output message="tns:ChackRoadSegAlarmSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ChackRoadSegAlarmCustom">
+      <wsdl:input message="tns:ChackRoadSegAlarmCustomSoapIn" />
+      <wsdl:output message="tns:ChackRoadSegAlarmCustomSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSeparateAndStickyCars">
+      <wsdl:input message="tns:GetSeparateAndStickyCarsSoapIn" />
+      <wsdl:output message="tns:GetSeparateAndStickyCarsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="IsCarsOnRoad">
+      <wsdl:input message="tns:IsCarsOnRoadSoapIn" />
+      <wsdl:output message="tns:IsCarsOnRoadSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="IsInArea">
+      <wsdl:input message="tns:IsInAreaSoapIn" />
+      <wsdl:output message="tns:IsInAreaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SegAlarmTest">
+      <wsdl:input message="tns:SegAlarmTestSoapIn" />
+      <wsdl:output message="tns:SegAlarmTestSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="AlarmServiceHttpGet">
+    <wsdl:operation name="ChackRoadSegAlarm">
+      <wsdl:input message="tns:ChackRoadSegAlarmHttpGetIn" />
+      <wsdl:output message="tns:ChackRoadSegAlarmHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ChackRoadSegAlarmCustom">
+      <wsdl:input message="tns:ChackRoadSegAlarmCustomHttpGetIn" />
+      <wsdl:output message="tns:ChackRoadSegAlarmCustomHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSeparateAndStickyCars">
+      <wsdl:input message="tns:GetSeparateAndStickyCarsHttpGetIn" />
+      <wsdl:output message="tns:GetSeparateAndStickyCarsHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="IsCarsOnRoad">
+      <wsdl:input message="tns:IsCarsOnRoadHttpGetIn" />
+      <wsdl:output message="tns:IsCarsOnRoadHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="IsInArea">
+      <wsdl:input message="tns:IsInAreaHttpGetIn" />
+      <wsdl:output message="tns:IsInAreaHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SegAlarmTest">
+      <wsdl:input message="tns:SegAlarmTestHttpGetIn" />
+      <wsdl:output message="tns:SegAlarmTestHttpGetOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="AlarmServiceHttpPost">
+    <wsdl:operation name="ChackRoadSegAlarm">
+      <wsdl:input message="tns:ChackRoadSegAlarmHttpPostIn" />
+      <wsdl:output message="tns:ChackRoadSegAlarmHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ChackRoadSegAlarmCustom">
+      <wsdl:input message="tns:ChackRoadSegAlarmCustomHttpPostIn" />
+      <wsdl:output message="tns:ChackRoadSegAlarmCustomHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSeparateAndStickyCars">
+      <wsdl:input message="tns:GetSeparateAndStickyCarsHttpPostIn" />
+      <wsdl:output message="tns:GetSeparateAndStickyCarsHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="IsCarsOnRoad">
+      <wsdl:input message="tns:IsCarsOnRoadHttpPostIn" />
+      <wsdl:output message="tns:IsCarsOnRoadHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="IsInArea">
+      <wsdl:input message="tns:IsInAreaHttpPostIn" />
+      <wsdl:output message="tns:IsInAreaHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SegAlarmTest">
+      <wsdl:input message="tns:SegAlarmTestHttpPostIn" />
+      <wsdl:output message="tns:SegAlarmTestHttpPostOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="AlarmServiceSoap" type="tns:AlarmServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="ChackRoadSegAlarm">
+      <soap:operation soapAction="http://tempuri.org/ChackRoadSegAlarm" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ChackRoadSegAlarmCustom">
+      <soap:operation soapAction="http://tempuri.org/ChackRoadSegAlarmCustom" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSeparateAndStickyCars">
+      <soap:operation soapAction="http://tempuri.org/GetSeparateAndStickyCars" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IsCarsOnRoad">
+      <soap:operation soapAction="http://tempuri.org/IsCarsOnRoad" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IsInArea">
+      <soap:operation soapAction="http://tempuri.org/IsInArea" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SegAlarmTest">
+      <soap:operation soapAction="http://tempuri.org/SegAlarmTest" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="AlarmServiceSoap12" type="tns:AlarmServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="ChackRoadSegAlarm">
+      <soap12:operation soapAction="http://tempuri.org/ChackRoadSegAlarm" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ChackRoadSegAlarmCustom">
+      <soap12:operation soapAction="http://tempuri.org/ChackRoadSegAlarmCustom" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSeparateAndStickyCars">
+      <soap12:operation soapAction="http://tempuri.org/GetSeparateAndStickyCars" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IsCarsOnRoad">
+      <soap12:operation soapAction="http://tempuri.org/IsCarsOnRoad" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IsInArea">
+      <soap12:operation soapAction="http://tempuri.org/IsInArea" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SegAlarmTest">
+      <soap12:operation soapAction="http://tempuri.org/SegAlarmTest" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="AlarmServiceHttpGet" type="tns:AlarmServiceHttpGet">
+    <http:binding verb="GET" />
+    <wsdl:operation name="ChackRoadSegAlarm">
+      <http:operation location="/ChackRoadSegAlarm" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ChackRoadSegAlarmCustom">
+      <http:operation location="/ChackRoadSegAlarmCustom" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSeparateAndStickyCars">
+      <http:operation location="/GetSeparateAndStickyCars" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IsCarsOnRoad">
+      <http:operation location="/IsCarsOnRoad" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IsInArea">
+      <http:operation location="/IsInArea" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SegAlarmTest">
+      <http:operation location="/SegAlarmTest" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="AlarmServiceHttpPost" type="tns:AlarmServiceHttpPost">
+    <http:binding verb="POST" />
+    <wsdl:operation name="ChackRoadSegAlarm">
+      <http:operation location="/ChackRoadSegAlarm" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ChackRoadSegAlarmCustom">
+      <http:operation location="/ChackRoadSegAlarmCustom" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSeparateAndStickyCars">
+      <http:operation location="/GetSeparateAndStickyCars" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IsCarsOnRoad">
+      <http:operation location="/IsCarsOnRoad" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IsInArea">
+      <http:operation location="/IsInArea" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SegAlarmTest">
+      <http:operation location="/SegAlarmTest" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="AlarmService">
+    <wsdl:port name="AlarmServiceSoap" binding="tns:AlarmServiceSoap">
+      <soap:address location="http://219.153.13.108:7260/StarGIS/Service/AlarmService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="AlarmServiceSoap12" binding="tns:AlarmServiceSoap12">
+      <soap12:address location="http://219.153.13.108:7260/StarGIS/Service/AlarmService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="AlarmServiceHttpGet" binding="tns:AlarmServiceHttpGet">
+      <http:address location="http://219.153.13.108:7260/StarGIS/Service/AlarmService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="AlarmServiceHttpPost" binding="tns:AlarmServiceHttpPost">
+      <http:address location="http://219.153.13.108:7260/StarGIS/Service/AlarmService.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

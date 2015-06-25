@@ -1,0 +1,425 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://adc.siinterface.com/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://adc.siinterface.com/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://adc.siinterface.com/">
+      <s:element name="ADCCheckUser">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sECCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sUserId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sUserPwd" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sVerifyCode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ADCCheckUserResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ADCCheckUserResult" type="tns:GpsResponse" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="GpsResponse">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ResultCode" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="ResultMsg" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="ADCSIInterface">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="request" type="tns:AdcSiRequest" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="AdcSiRequest">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ActionCode" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="BizCode" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Dealkind" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Priority" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="SIAppID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SvcCont" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="TestFlag" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="TimeStamp" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TransID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Version" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="ADCSIInterfaceResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ADCSIInterfaceResult" type="tns:AdcSiResponse" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="AdcSiResponse">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ActionCode" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="BizCode" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Dealkind" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Priority" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="ResultCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ResultMsg" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SIAppID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SvcCont" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="TestFlag" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="TimeStamp" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TransID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Version" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="CheckUser">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sECCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sUserId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sUserPw" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="bAllowPhoneLogin" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CheckUserResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CheckUserResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPrdOrdNum">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="tel" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPrdOrdNumResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetPrdOrdNumResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoginVerify">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sECCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sUserId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sUserPw" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoginVerifyResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LoginVerifyResult" type="tns:GpsResponse" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GpsResponse" nillable="true" type="tns:GpsResponse" />
+      <s:element name="string" nillable="true" type="s:string" />
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="ADCCheckUserSoapIn">
+    <wsdl:part name="parameters" element="tns:ADCCheckUser" />
+  </wsdl:message>
+  <wsdl:message name="ADCCheckUserSoapOut">
+    <wsdl:part name="parameters" element="tns:ADCCheckUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="ADCSIInterfaceSoapIn">
+    <wsdl:part name="parameters" element="tns:ADCSIInterface" />
+  </wsdl:message>
+  <wsdl:message name="ADCSIInterfaceSoapOut">
+    <wsdl:part name="parameters" element="tns:ADCSIInterfaceResponse" />
+  </wsdl:message>
+  <wsdl:message name="CheckUserSoapIn">
+    <wsdl:part name="parameters" element="tns:CheckUser" />
+  </wsdl:message>
+  <wsdl:message name="CheckUserSoapOut">
+    <wsdl:part name="parameters" element="tns:CheckUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetPrdOrdNumSoapIn">
+    <wsdl:part name="parameters" element="tns:GetPrdOrdNum" />
+  </wsdl:message>
+  <wsdl:message name="GetPrdOrdNumSoapOut">
+    <wsdl:part name="parameters" element="tns:GetPrdOrdNumResponse" />
+  </wsdl:message>
+  <wsdl:message name="LoginVerifySoapIn">
+    <wsdl:part name="parameters" element="tns:LoginVerify" />
+  </wsdl:message>
+  <wsdl:message name="LoginVerifySoapOut">
+    <wsdl:part name="parameters" element="tns:LoginVerifyResponse" />
+  </wsdl:message>
+  <wsdl:message name="ADCCheckUserHttpGetIn">
+    <wsdl:part name="sECCode" type="s:string" />
+    <wsdl:part name="sUserId" type="s:string" />
+    <wsdl:part name="sUserPwd" type="s:string" />
+    <wsdl:part name="sVerifyCode" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ADCCheckUserHttpGetOut">
+    <wsdl:part name="Body" element="tns:GpsResponse" />
+  </wsdl:message>
+  <wsdl:message name="CheckUserHttpGetIn">
+    <wsdl:part name="sECCode" type="s:string" />
+    <wsdl:part name="sUserId" type="s:string" />
+    <wsdl:part name="sUserPw" type="s:string" />
+    <wsdl:part name="bAllowPhoneLogin" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="CheckUserHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetPrdOrdNumHttpGetIn">
+    <wsdl:part name="tel" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetPrdOrdNumHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="LoginVerifyHttpGetIn">
+    <wsdl:part name="sECCode" type="s:string" />
+    <wsdl:part name="sUserId" type="s:string" />
+    <wsdl:part name="sUserPw" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="LoginVerifyHttpGetOut">
+    <wsdl:part name="Body" element="tns:GpsResponse" />
+  </wsdl:message>
+  <wsdl:message name="ADCCheckUserHttpPostIn">
+    <wsdl:part name="sECCode" type="s:string" />
+    <wsdl:part name="sUserId" type="s:string" />
+    <wsdl:part name="sUserPwd" type="s:string" />
+    <wsdl:part name="sVerifyCode" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ADCCheckUserHttpPostOut">
+    <wsdl:part name="Body" element="tns:GpsResponse" />
+  </wsdl:message>
+  <wsdl:message name="CheckUserHttpPostIn">
+    <wsdl:part name="sECCode" type="s:string" />
+    <wsdl:part name="sUserId" type="s:string" />
+    <wsdl:part name="sUserPw" type="s:string" />
+    <wsdl:part name="bAllowPhoneLogin" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="CheckUserHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetPrdOrdNumHttpPostIn">
+    <wsdl:part name="tel" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetPrdOrdNumHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="LoginVerifyHttpPostIn">
+    <wsdl:part name="sECCode" type="s:string" />
+    <wsdl:part name="sUserId" type="s:string" />
+    <wsdl:part name="sUserPw" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="LoginVerifyHttpPostOut">
+    <wsdl:part name="Body" element="tns:GpsResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IGPSM2MDataServerSoap">
+    <wsdl:operation name="ADCCheckUser">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">鉴权带二次验证(短信验证或Email验证)</wsdl:documentation>
+      <wsdl:input message="tns:ADCCheckUserSoapIn" />
+      <wsdl:output message="tns:ADCCheckUserSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ADCSIInterface">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">车务通订购数据同步接口</wsdl:documentation>
+      <wsdl:input message="tns:ADCSIInterfaceSoapIn" />
+      <wsdl:output message="tns:ADCSIInterfaceSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CheckUser">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">鉴权</wsdl:documentation>
+      <wsdl:input message="tns:CheckUserSoapIn" />
+      <wsdl:output message="tns:CheckUserSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPrdOrdNum">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">获取车务通成员的付费号码</wsdl:documentation>
+      <wsdl:input message="tns:GetPrdOrdNumSoapIn" />
+      <wsdl:output message="tns:GetPrdOrdNumSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LoginVerify">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">登录验证</wsdl:documentation>
+      <wsdl:input message="tns:LoginVerifySoapIn" />
+      <wsdl:output message="tns:LoginVerifySoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="IGPSM2MDataServerHttpGet">
+    <wsdl:operation name="ADCCheckUser">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">鉴权带二次验证(短信验证或Email验证)</wsdl:documentation>
+      <wsdl:input message="tns:ADCCheckUserHttpGetIn" />
+      <wsdl:output message="tns:ADCCheckUserHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CheckUser">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">鉴权</wsdl:documentation>
+      <wsdl:input message="tns:CheckUserHttpGetIn" />
+      <wsdl:output message="tns:CheckUserHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPrdOrdNum">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">获取车务通成员的付费号码</wsdl:documentation>
+      <wsdl:input message="tns:GetPrdOrdNumHttpGetIn" />
+      <wsdl:output message="tns:GetPrdOrdNumHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LoginVerify">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">登录验证</wsdl:documentation>
+      <wsdl:input message="tns:LoginVerifyHttpGetIn" />
+      <wsdl:output message="tns:LoginVerifyHttpGetOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="IGPSM2MDataServerHttpPost">
+    <wsdl:operation name="ADCCheckUser">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">鉴权带二次验证(短信验证或Email验证)</wsdl:documentation>
+      <wsdl:input message="tns:ADCCheckUserHttpPostIn" />
+      <wsdl:output message="tns:ADCCheckUserHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CheckUser">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">鉴权</wsdl:documentation>
+      <wsdl:input message="tns:CheckUserHttpPostIn" />
+      <wsdl:output message="tns:CheckUserHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPrdOrdNum">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">获取车务通成员的付费号码</wsdl:documentation>
+      <wsdl:input message="tns:GetPrdOrdNumHttpPostIn" />
+      <wsdl:output message="tns:GetPrdOrdNumHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LoginVerify">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">登录验证</wsdl:documentation>
+      <wsdl:input message="tns:LoginVerifyHttpPostIn" />
+      <wsdl:output message="tns:LoginVerifyHttpPostOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="IGPSM2MDataServerSoap" type="tns:IGPSM2MDataServerSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="ADCCheckUser">
+      <soap:operation soapAction="http://adc.siinterface.com/ADCCheckUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ADCSIInterface">
+      <soap:operation soapAction="http://adc.siinterface.com/ADCSIInterface" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckUser">
+      <soap:operation soapAction="http://adc.siinterface.com/CheckUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPrdOrdNum">
+      <soap:operation soapAction="http://adc.siinterface.com/GetPrdOrdNum" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoginVerify">
+      <soap:operation soapAction="http://adc.siinterface.com/LoginVerify" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="IGPSM2MDataServerHttpGet" type="tns:IGPSM2MDataServerHttpGet">
+    <http:binding verb="GET" />
+    <wsdl:operation name="ADCCheckUser">
+      <http:operation location="/ADCCheckUser" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckUser">
+      <http:operation location="/CheckUser" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPrdOrdNum">
+      <http:operation location="/GetPrdOrdNum" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoginVerify">
+      <http:operation location="/LoginVerify" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="IGPSM2MDataServerHttpPost" type="tns:IGPSM2MDataServerHttpPost">
+    <http:binding verb="POST" />
+    <wsdl:operation name="ADCCheckUser">
+      <http:operation location="/ADCCheckUser" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckUser">
+      <http:operation location="/CheckUser" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPrdOrdNum">
+      <http:operation location="/GetPrdOrdNum" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoginVerify">
+      <http:operation location="/LoginVerify" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="IGPSM2MDataServer">
+    <wsdl:port name="IGPSM2MDataServerSoap" binding="tns:IGPSM2MDataServerSoap">
+      <soap:address location="http://192.168.1.52/gpswebservices/IGPSM2MDataServer.asmx" />
+    </wsdl:port>
+    <wsdl:port name="IGPSM2MDataServerHttpGet" binding="tns:IGPSM2MDataServerHttpGet">
+      <http:address location="http://192.168.1.52/gpswebservices/IGPSM2MDataServer.asmx" />
+    </wsdl:port>
+    <wsdl:port name="IGPSM2MDataServerHttpPost" binding="tns:IGPSM2MDataServerHttpPost">
+      <http:address location="http://192.168.1.52/gpswebservices/IGPSM2MDataServer.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

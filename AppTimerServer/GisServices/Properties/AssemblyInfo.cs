@@ -1,0 +1,19 @@
+﻿using System.Diagnostics;
+using System.Reflection;
+using System.Runtime.CompilerServices;
+using System.Runtime.InteropServices;
+
+[assembly: AssemblyCompany("")]
+[assembly: AssemblyConfiguration("")]
+[assembly: AssemblyCopyright("")]
+[assembly: AssemblyDescription("")]
+[assembly: AssemblyFileVersion("4.2")]
+[assembly: AssemblyProduct("")]
+[assembly: AssemblyTitle("")]
+[assembly: AssemblyTrademark("")]
+[assembly: AssemblyVersion("4.2.0.0")]
+[assembly: CompilationRelaxations(8)]
+[assembly: ComVisible(false)]
+[assembly: Debuggable(DebuggableAttribute.DebuggingModes.IgnoreSymbolStoreSequencePoints)]
+[assembly: Guid("db4b0db3-2f9a-41eb-857d-f3cae90188ee")]
+[assembly: RuntimeCompatibility(WrapNonExceptionThrows=true)]
