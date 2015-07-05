@@ -1933,9 +1933,9 @@
       <Project>{366BE2FE-03DC-4368-A9AF-CC538EDABB28}</Project>
       <Name>Plugin</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\AppServer\PublicClass\PublicClass.csproj">
-      <Project>{87AD003F-27F0-4B2B-A3D3-0A01F717ECAA}</Project>
-      <Name>PublicClass %28AppServer\PublicClass%29</Name>
+    <ProjectReference Include="..\PublicClass\PublicClass.csproj">
+      <Project>{1EB863EC-FCCA-4AC0-8A50-3ED52FAADE68}</Project>
+      <Name>PublicClass %28Client\PublicClass%29</Name>
     </ProjectReference>
     <ProjectReference Include="..\Remoting\Remoting.csproj">
       <Project>{2787D492-BB9C-4E6A-8274-283E2EBB863E}</Project>

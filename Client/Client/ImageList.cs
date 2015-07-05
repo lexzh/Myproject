@@ -542,7 +542,7 @@
                     FileInfo info2 = new FileInfo(sPicFolderPath + str7);
                     if (!info2.Exists)
                     {
-                        DataTable table = RemotingClient.Car_GetCarImgInfo(strPhone, strGpsTime, strCaremaId, "");
+                        DataTable table = RemotingClient.Car_GetCarImgInfo(strPhone, strGpsTime, strCaremaId, s);
                         if ((table != null) && (table.Rows.Count > 0))
                         {
                             object obj2 = null;

@@ -28,7 +28,7 @@
         private void btnOk_Click(object sender, EventArgs e)
         {
             BackgroundWorker worker = new BackgroundWorker();
-            worker.DoWork += new DoWorkEventHandler(this.method_1);
+            worker.DoWork += new DoWorkEventHandler(this.Check);
             worker.RunWorkerCompleted += new RunWorkerCompletedEventHandler(this.method_0);
             worker.RunWorkerAsync();
             this.method_20(false);
@@ -154,7 +154,7 @@
             }
         }
 
- private void method_0(object sender, RunWorkerCompletedEventArgs e)
+        private void method_0(object sender, RunWorkerCompletedEventArgs e)
         {
             string str = e.Result.ToString();
             if (string.IsNullOrEmpty(str))
@@ -168,14 +168,14 @@
             this.method_20(true);
         }
 
-        private void method_1(object sender, DoWorkEventArgs e)
+        private void Check(object sender, DoWorkEventArgs e)
         {
             string str = "";
-            if (!this.method_4(out str))
+            if (!this.CheckPort(out str))
             {
                 e.Result = str;
             }
-            else if (!this.method_14(out str))
+            else if (!this.CheckDB(out str))
             {
                 e.Result = str;
             }
@@ -207,7 +207,7 @@
             {
                 try
                 {
-                    this.method_2();
+                    this.SaveConfig();
                 }
                 catch (Exception exception)
                 {
@@ -248,7 +248,7 @@
             try
             {
                 ICheck check = new DataBase();
-                return (check.Check(this.method_15()) ? "" : "与数据库连接失败");
+                return (check.Check(this.ConnectDB()) ? "" : "与数据库连接失败");
             }
             catch (Exception exception)
             {
@@ -256,22 +256,22 @@
             }
         }
 
-        private bool method_14(out string string_0)
+        private bool CheckDB(out string ErrMsg)
         {
-            string_0 = "";
+            ErrMsg = "";
             try
             {
                 ICheck check = new DataBase();
-                return check.Check(this.method_15());
+                return check.Check(this.ConnectDB());
             }
             catch (Exception exception)
             {
-                string_0 = exception.Message;
+                ErrMsg = exception.Message;
                 return false;
             }
         }
 
-        private DataBaseParams method_15()
+        private DataBaseParams ConnectDB()
         {
             return new DataBaseParams { DataBaseIp = this.txtDataSource.Text.Trim(), DataBaseName = this.txtInitialCatalog.Text.Trim(), DataBaseUser = this.txtUserId.Text.Trim(), DataBasePassword = this.txtPassword.Text.Trim() };
         }
@@ -330,10 +330,10 @@
             return new ServerManager("GpsAppServer");
         }
 
-        private void method_2()
+        private void SaveConfig()
         {
             XMLFile file = new XMLFile(this.getXmlPath());
-            file.SetConfig("ConnectionString", this.method_15().DataBaseStringParam);
+            file.SetConfig("ConnectionString", this.ConnectDB().DataBaseStringParam);
             file.SetConfig("UpdateFilePath", this.txtPath.Text.Trim());
             file.SetConfig("UpdateFileVersion", this.txtFileVersion.Text.Trim());
             file.SetConfig("communicationUrl", this.txtServerIp.Text.Trim());
@@ -373,7 +373,7 @@
             return true;
         }
 
-        private bool method_4(out string string_0)
+        private bool CheckPort(out string string_0)
         {
             bool flag;
             if (string.IsNullOrEmpty(this.txtPort1.Text.Trim()) && string.IsNullOrEmpty(this.txtPort2.Text.Trim()))
