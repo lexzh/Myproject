@@ -132,13 +132,13 @@
             // grpCar
             // 
             this.grpCar.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.grpCar.Location = new System.Drawing.Point(5, -117);
+            this.grpCar.Location = new System.Drawing.Point(5, -76);
             this.grpCar.Size = new System.Drawing.Size(374, 116);
             this.grpCar.TabIndex = 0;
             // 
             // pnlBtn
             // 
-            this.pnlBtn.Location = new System.Drawing.Point(5, 718);
+            this.pnlBtn.Location = new System.Drawing.Point(5, 759);
             this.pnlBtn.Size = new System.Drawing.Size(374, 28);
             this.pnlBtn.TabIndex = 3;
             // 
@@ -157,7 +157,7 @@
             this.grpImageParam.Controls.Add(this.pnlTransfers);
             this.grpImageParam.Controls.Add(this.pnlCamera);
             this.grpImageParam.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.grpImageParam.Location = new System.Drawing.Point(5, -1);
+            this.grpImageParam.Location = new System.Drawing.Point(5, 40);
             this.grpImageParam.Name = "grpImageParam";
             this.grpImageParam.Size = new System.Drawing.Size(374, 242);
             this.grpImageParam.TabIndex = 1;
@@ -586,7 +586,7 @@
             this.grpWatchParam.Controls.Add(this.trkChroma);
             this.grpWatchParam.Controls.Add(this.chkDefault);
             this.grpWatchParam.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.grpWatchParam.Location = new System.Drawing.Point(5, 435);
+            this.grpWatchParam.Location = new System.Drawing.Point(5, 476);
             this.grpWatchParam.Name = "grpWatchParam";
             this.grpWatchParam.Size = new System.Drawing.Size(374, 283);
             this.grpWatchParam.TabIndex = 2;
@@ -965,7 +965,7 @@
             this.grbPicParam.Controls.Add(this.btnAddPicTime);
             this.grbPicParam.Controls.Add(this.dtpPicParamTime);
             this.grbPicParam.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.grbPicParam.Location = new System.Drawing.Point(5, 241);
+            this.grbPicParam.Location = new System.Drawing.Point(5, 282);
             this.grbPicParam.Name = "grbPicParam";
             this.grbPicParam.Size = new System.Drawing.Size(374, 94);
             this.grbPicParam.TabIndex = 4;
@@ -1040,7 +1040,7 @@
             this.grpTime.Controls.Add(this.dtpEndDate);
             this.grpTime.Controls.Add(this.dtpStartDate);
             this.grpTime.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.grpTime.Location = new System.Drawing.Point(5, 335);
+            this.grpTime.Location = new System.Drawing.Point(5, 376);
             this.grpTime.Name = "grpTime";
             this.grpTime.Size = new System.Drawing.Size(374, 100);
             this.grpTime.TabIndex = 6;
@@ -1119,7 +1119,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(384, 751);
+            this.ClientSize = new System.Drawing.Size(384, 792);
             this.Controls.Add(this.grpImageParam);
             this.Controls.Add(this.grbPicParam);
             this.Controls.Add(this.grpTime);

@@ -24,7 +24,7 @@
             int num = 0;
             for (int i = 0; i <= (strArray.Length - 1); i++)
             {
-                if (!AppServerParam.Number.IsNumber(strArray[i]))
+                if (!Number.IsNumber(strArray[i]))
                 {
                     throw new Exception("IP格式不对");
                 }

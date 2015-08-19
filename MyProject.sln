@@ -39,9 +39,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WinFormsUI", "Client\WinFor
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "TimerServer", "TimerServer", "{2F4C5347-863C-4F73-A851-B56C4CC1D3F8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppTimerParam", "AppTimerServer\AppTimerParam\AppTimerParam.csproj", "{44A97DCB-128E-4842-9D0B-6A456F4FD904}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TimerParam", "AppTimerServer\AppTimerParam\TimerParam.csproj", "{44A97DCB-128E-4842-9D0B-6A456F4FD904}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppTimerServer", "AppTimerServer\AppTimerServer\AppTimerServer.csproj", "{DB4D6FF2-31F0-4EDE-9FBB-506CE803A191}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TimerServer", "AppTimerServer\AppTimerServer\TimerServer.csproj", "{DB4D6FF2-31F0-4EDE-9FBB-506CE803A191}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bussiness", "AppTimerServer\Bussiness\Bussiness.csproj", "{F3877B68-0F91-4CC2-99B1-A5698F117C67}"
 EndProject

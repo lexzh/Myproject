@@ -17,7 +17,7 @@ namespace Client
         public LogForms()
         {
             InitializeComponent();
-            this.tpNotice.Text = Variable.sNoticeLogText;
+            this.tpNotice.Text = string.IsNullOrEmpty(Variable.sNoticeLogText) ? "上下线通知" : Variable.sNoticeLogText;
         }
 
         public void setCurrentTabPage()

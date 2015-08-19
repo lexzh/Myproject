@@ -1,6 +1,6 @@
-﻿namespace AppServerParam
+﻿namespace TimerServerParam
 {
-    partial class GpsAppTimerParam
+    partial class AppTimerParam
     {
         /// <summary>
         /// Required designer variable.

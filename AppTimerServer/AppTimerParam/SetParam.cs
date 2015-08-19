@@ -11,7 +11,7 @@ using Microsoft.Win32;
 using System.Data.SqlClient;
 using System.Xml;
 
-namespace AppServerParam
+namespace TimerServerParam
 {
     public partial class SetParam : Form
     {

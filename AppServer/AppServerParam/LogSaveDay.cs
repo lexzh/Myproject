@@ -10,7 +10,7 @@ namespace AppServerParam
         public bool Check(object object_0)
         {
             string str = object_0 as string;
-            if (!AppServerParam.Number.IsNumber(str))
+            if (!Number.IsNumber(str))
             {
                 throw new Exception("不是数字！");
             }

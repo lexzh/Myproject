@@ -1,4 +1,4 @@
-﻿namespace AppServerParam
+﻿namespace TimerServerParam
 {
     partial class SetParam
     {

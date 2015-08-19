@@ -9,7 +9,7 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ApplicationIcon />
     <AssemblyKeyContainerName />
-    <AssemblyName>GpsAppServer</AssemblyName>
+    <AssemblyName>AppServer</AssemblyName>
     <AssemblyOriginatorKeyFile>
     </AssemblyOriginatorKeyFile>
     <DefaultClientScript>JScript</DefaultClientScript>
@@ -19,8 +19,7 @@
     <OutputType>Exe</OutputType>
     <RootNamespace>AppServer</RootNamespace>
     <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
-    <StartupObject>
-    </StartupObject>
+    <StartupObject>AppServer.Program</StartupObject>
     <FileUpgradeFlags>
     </FileUpgradeFlags>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
@@ -195,7 +194,7 @@
   <ItemGroup>
     <ProjectReference Include="..\Bussiness\Bussiness.csproj">
       <Project>{7F48C880-646D-4683-AE29-F5A94AFC4506}</Project>
-      <Name>Bussiness</Name>
+      <Name>Bussiness %28AppServer\Bussiness%29</Name>
     </ProjectReference>
     <ProjectReference Include="..\DataAccess\DataAccess.csproj">
       <Project>{CE9A2C93-797E-496D-980C-572026E51D4A}</Project>

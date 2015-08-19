@@ -1,7 +1,7 @@
 using System;
 using System.Windows.Forms;
 
-namespace AppServerParam
+namespace TimerServerParam
 {
 	internal static class Program
 	{
@@ -10,7 +10,7 @@ namespace AppServerParam
 		{
 			Application.EnableVisualStyles();
 			Application.SetCompatibleTextRenderingDefault(false);
-			Application.Run(new GpsAppTimerParam(args));
+			Application.Run(new AppTimerParam(args));
 		}
 	}
 }

@@ -1,7 +1,7 @@
 using System;
 using System.ServiceProcess;
 
-namespace AppServerParam
+namespace TimerServerParam
 {
 	public class ServerManager
 	{

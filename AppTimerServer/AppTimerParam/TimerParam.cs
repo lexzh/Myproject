@@ -11,9 +11,9 @@ using System.IO;
 using Microsoft.Win32;
 using System.Data.SqlClient;
 
-namespace AppServerParam
+namespace TimerServerParam
 {
-    public partial class GpsAppTimerParam : Form
+    public partial class AppTimerParam : Form
     {
         private static string sFileName = "param.xml";
 
@@ -23,7 +23,7 @@ namespace AppServerParam
 
         private int LBSPosSleepTime;
 
-        public GpsAppTimerParam(string[] args)
+        public AppTimerParam(string[] args)
         {
             if ((int)args.Length > 0)
             {

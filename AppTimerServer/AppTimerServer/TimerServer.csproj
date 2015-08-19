@@ -1,11 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <ProjectGuid>{44A97DCB-128E-4842-9D0B-6A456F4FD904}</ProjectGuid>
+    <ProjectGuid>{DB4D6FF2-31F0-4EDE-9FBB-506CE803A191}</ProjectGuid>
     <SchemaVersion>2</SchemaVersion>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
-    <AssemblyName>GpsAppTimerParam</AssemblyName>
+    <AssemblyName>TimerServer</AssemblyName>
     <OutputType>WinExe</OutputType>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
   </PropertyGroup>
@@ -20,7 +20,7 @@
     <PlatformTarget>x86</PlatformTarget>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
-    <OutputPath>bin\Release\</OutputPath>
+    <OutputPath>..\%40Bin\Release\</OutputPath>
     <DebugSymbols>false</DebugSymbols>
     <DefineConstants>TRACE</DefineConstants>
     <Optimize>true</Optimize>
@@ -30,24 +30,33 @@
     <PlatformTarget>x86</PlatformTarget>
   </PropertyGroup>
   <PropertyGroup>
-    <RootNamespace>GpsAppServerParam</RootNamespace>
+    <RootNamespace>TimerServer</RootNamespace>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="System.Windows.Forms" />
-    <Reference Include="System" />
-    <Reference Include="System.Xml" />
-    <Reference Include="System.ServiceProcess" />
-    <Reference Include="System.Drawing" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.ServiceProcess" />
+    <Reference Include="System.Configuration.Install" />
+    <Reference Include="System" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="GpsAppTimerParam.cs">
-      <SubType>Form</SubType>
+    <Compile Include="Installer.cs">
+      <SubType>Component</SubType>
     </Compile>
-    <Compile Include="GpsAppTimerParam.Designer.cs">
-      <DependentUpon>GpsAppTimerParam.cs</DependentUpon>
+    <Compile Include="Installer.Designer.cs">
+      <DependentUpon>Installer.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Properties\Settings.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Program.cs">
       <AutoGen>false</AutoGen>
       <DesignTimeSharedInput>false</DesignTimeSharedInput>
     </Compile>
@@ -57,34 +66,26 @@
       <DesignTimeSharedInput>true</DesignTimeSharedInput>
       <DesignTime>True</DesignTime>
     </Compile>
-    <Compile Include="Properties\Settings.cs">
-      <AutoGen>false</AutoGen>
-      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    <Compile Include="Service.cs">
+      <SubType>Component</SubType>
     </Compile>
-    <Compile Include="ServerManager.cs">
-      <AutoGen>false</AutoGen>
-      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    <Compile Include="Service.Designer.cs">
+      <DependentUpon>Service.cs</DependentUpon>
     </Compile>
-    <Compile Include="Program.cs">
-      <AutoGen>false</AutoGen>
-      <DesignTimeSharedInput>false</DesignTimeSharedInput>
-    </Compile>
-    <Compile Include="SetParam.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="SetParam.Designer.cs">
-      <DependentUpon>SetParam.cs</DependentUpon>
-    </Compile>
-    <EmbeddedResource Include="GpsAppTimerParam.resx">
-      <DependentUpon>GpsAppTimerParam.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="SetParam.resx">
-      <DependentUpon>SetParam.cs</DependentUpon>
-    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Client\PublicClass\PublicClass.csproj">
+      <Project>{1EB863EC-FCCA-4AC0-8A50-3ED52FAADE68}</Project>
+      <Name>PublicClass %28Client\PublicClass%29</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Bussiness\Bussiness.csproj">
+      <Project>{F3877B68-0F91-4CC2-99B1-A5698F117C67}</Project>
+      <Name>Bussiness %28TimerServer\Bussiness%29</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -217,7 +217,7 @@
   <ItemGroup>
     <ProjectReference Include="..\Bussiness\Bussiness.csproj">
       <Project>{7F48C880-646D-4683-AE29-F5A94AFC4506}</Project>
-      <Name>Bussiness</Name>
+      <Name>Bussiness %28AppServer\Bussiness%29</Name>
     </ProjectReference>
     <ProjectReference Include="..\Contract\Contract.csproj">
       <Project>{A2B2BDEC-BD4D-4681-B99C-F648E9EF14E7}</Project>

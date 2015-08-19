@@ -1,4 +1,4 @@
-namespace AppServerParam.Properties
+namespace TimerServerParam.Properties
 {
     using System;
     using System.CodeDom.Compiler;
